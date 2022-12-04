@@ -1,0 +1,176 @@
+﻿@model List<ServerLiveStatus.dbo_connt.ServersMonetory>
+
+
+
+<h1>PESONLINE SERVICES</h1>
+<div>
+    <table class=" table table-bordered">
+        <thead>
+            <tr style="background:#0094ff; color:white;">
+                @*<th>Id</th>*@
+                <th>ServerName</th>
+                <th>Sep91</th>
+                <th>Sep95</th>
+                <th>Sep100</th>
+                <th>Sep98</th>
+                <th>
+                    Elme
+                    Sep
+                </th>
+                <th>
+                    Nep
+                    Sep
+                </th>
+                <th>
+                    Log
+                    Sep
+                </th>
+                <th>
+                    Pes
+                    Sep
+                </th>
+                <th>
+                    Dcu
+                    Sep
+                </th>
+                <th>Dis91</th>
+                <th>Dis95</th>
+                <th>Dis100</th>
+                <th>Dis98</th>
+                <th>
+                    Dis
+                    Elm
+                </th>
+                <th>
+                    Dis
+                    Nep
+                </th>
+                <th>
+                    Dis
+                    Log
+                </th>
+                <th>
+                    Dis
+                    Pes
+                </th>
+                <th>
+                    Dis
+                    Dcu
+                </th>
+                <th>
+                    M
+                    91
+                </th>
+                <th>
+                    M
+                    95
+                </th>
+                <th>
+                    M
+                    98
+                </th>
+                <th>
+                    M
+                    100
+                </th>
+                <th>
+                    Sms
+                    Eng
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>@item.Id</td>*@
+                    <td style="background:#0094ff; color:white;">@item.ServerName</td>
+                    <td>@item.Seprator91</td>
+                    <td>@item.Seprator95</td>
+                    <td>@item.Seprator100</td>
+                    <td>@item.Seprator98</td>
+                    <td>@item.ElmeasureSeprator</td>
+                    <td>@item.NeptuneSeprator</td>
+                    <td>@item.LogixSeprator</td>
+                    <td>@item.PesaurdinoSeprator</td>
+                    <td>@item.PesDcuSeprator</td>
+                    <td>@item.Disconnection91</td>
+                    <td>@item.Disconnection95</td>
+                    <td>@item.Disconnection100</td>
+                    <td>@item.Disconnection98</td>
+                    <td>@item.DisconnectionElmeasure</td>
+                    <td>@item.DisconnectionNeptune</td>
+                    <td>@item.DisconnectionLogix</td>
+                    <td>@item.DisconnectionPasaurdino</td>
+                    <td>@item.DisconnectionPesDcu</td>
+                    <td>@item.MeterSock91</td>
+                    <td>@item.MeterSock95</td>
+                    <td>@item.MeterSock98</td>
+                    <td>@item.MeterSock100</td>
+                    <td>@item.SmsEngine</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<br />
+<div class="form-horizontal">
+    <div class="form-group">
+        <div class="col-md-10">
+            <label>Current Time</label>
+            <input id="CurTime"  class="form-control" readonly />
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var currentdate = new Date();
+        var hours = currentdate.getHours();
+        var minutes = currentdate.getMinutes();
+        var seconds = currentdate.getSeconds();
+        if (hours < 10) {
+            hours = "0" + hours.toString();
+        }
+        if (minutes < 10) {
+            minutes = "0" + minutes.toString();
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds.toString();
+        }
+        var Time = hours + ":" + minutes + ":" + seconds;
+        $('#CurTime').val(Time);
+    });
+    $(document).ready(function () {
+
+        $('table>tbody>tr>td').each(function (index, td) {
+           
+            var currTime = $('#CurTime').val();
+            console.log(currentTime);
+            var inputTime = new Date("November 13, 2013 " + td.innerHTML);
+
+            var currentTime = new Date("November 13, 2013 " + currTime);
+            var a = inputTime.getTime() / 1000000;
+            
+            var b = currentTime.getTime() / 1000000;
+            console.log(b - a);
+
+            if (!(index == 0 || index % 24 == 0)) {
+
+                if (b - a < .5 && b - a > -0.5 ) {
+                    $(this).css('background-color', 'green');
+                }
+                else if (index == null) {                  
+                    $(this).css('background-color', 'Orange');
+                }
+                else {
+                    $(this).css('background-color', 'red');
+                }
+            }
+
+        });
+    });
+
+</script>
+

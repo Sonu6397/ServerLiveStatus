@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PesDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ServersMonetory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServerName" Type="varchar" MaxLength="50" />
+          <Property Name="IP_Address" Type="varchar" MaxLength="50" />
+          <Property Name="Seprator91" Type="time" Precision="7" />
+          <Property Name="Seprator95" Type="time" Precision="7" />
+          <Property Name="Seprator100" Type="time" Precision="7" />
+          <Property Name="Seprator98" Type="time" Precision="7" />
+          <Property Name="ElmeasureSeprator" Type="time" Precision="7" />
+          <Property Name="NeptuneSeprator" Type="time" Precision="7" />
+          <Property Name="LogixSeprator" Type="time" Precision="7" />
+          <Property Name="AurdinoSeprator" Type="time" Precision="7" />
+          <Property Name="PesDcuSeprator" Type="time" Precision="7" />
+          <Property Name="Disconnection91" Type="time" Precision="7" />
+          <Property Name="Disconnection95" Type="time" Precision="7" />
+          <Property Name="Disconnection100" Type="time" Precision="7" />
+          <Property Name="Disconnection98" Type="time" Precision="7" />
+          <Property Name="DisconnectionElmeasure" Type="time" Precision="7" />
+          <Property Name="DisconnectionNeptune" Type="time" Precision="7" />
+          <Property Name="DisconnectionLogix" Type="time" Precision="7" />
+          <Property Name="DisconnectionAurdino" Type="time" Precision="7" />
+          <Property Name="DisconnectionPesDcu" Type="time" Precision="7" />
+          <Property Name="MeterSock91" Type="time" Precision="7" />
+          <Property Name="MeterSock95" Type="time" Precision="7" />
+          <Property Name="MeterSock98" Type="time" Precision="7" />
+          <Property Name="MeterSock100" Type="time" Precision="7" />
+          <Property Name="SmsEngine" Type="time" Precision="7" />
+          <Property Name="WaveSept" Type="varchar" MaxLength="50" />
+          <Property Name="WaveSept2" Type="varchar" MaxLength="50" />
+          <Property Name="Dis_Wave" Type="varchar" MaxLength="50" />
+          <Property Name="HostName" Type="varchar" MaxLength="500" />
+          <Property Name="DomainName" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityContainer Name="PesDataModelStoreContainer">
+          <EntitySet Name="ServersMonetory" EntityType="Self.ServersMonetory" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PesDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ServersMonetory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IP_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Seprator91" Type="Time" Precision="7" />
+          <Property Name="Seprator95" Type="Time" Precision="7" />
+          <Property Name="Seprator100" Type="Time" Precision="7" />
+          <Property Name="Seprator98" Type="Time" Precision="7" />
+          <Property Name="ElmeasureSeprator" Type="Time" Precision="7" />
+          <Property Name="NeptuneSeprator" Type="Time" Precision="7" />
+          <Property Name="LogixSeprator" Type="Time" Precision="7" />
+          <Property Name="AurdinoSeprator" Type="Time" Precision="7" />
+          <Property Name="PesDcuSeprator" Type="Time" Precision="7" />
+          <Property Name="Disconnection91" Type="Time" Precision="7" />
+          <Property Name="Disconnection95" Type="Time" Precision="7" />
+          <Property Name="Disconnection100" Type="Time" Precision="7" />
+          <Property Name="Disconnection98" Type="Time" Precision="7" />
+          <Property Name="DisconnectionElmeasure" Type="Time" Precision="7" />
+          <Property Name="DisconnectionNeptune" Type="Time" Precision="7" />
+          <Property Name="DisconnectionLogix" Type="Time" Precision="7" />
+          <Property Name="DisconnectionAurdino" Type="Time" Precision="7" />
+          <Property Name="DisconnectionPesDcu" Type="Time" Precision="7" />
+          <Property Name="MeterSock91" Type="Time" Precision="7" />
+          <Property Name="MeterSock95" Type="Time" Precision="7" />
+          <Property Name="MeterSock98" Type="Time" Precision="7" />
+          <Property Name="MeterSock100" Type="Time" Precision="7" />
+          <Property Name="SmsEngine" Type="Time" Precision="7" />
+          <Property Name="WaveSept" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WaveSept2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Dis_Wave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HostName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DomainName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="PesDataEntities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ServersMonetories" EntityType="Self.ServersMonetory" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PesDataModelStoreContainer" CdmEntityContainer="PesDataEntities4">
+          <EntitySetMapping Name="ServersMonetories">
+            <EntityTypeMapping TypeName="PesDataModel.ServersMonetory">
+              <MappingFragment StoreEntitySet="ServersMonetory">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+                <ScalarProperty Name="IP_Address" ColumnName="IP_Address" />
+                <ScalarProperty Name="Seprator91" ColumnName="Seprator91" />
+                <ScalarProperty Name="Seprator95" ColumnName="Seprator95" />
+                <ScalarProperty Name="Seprator100" ColumnName="Seprator100" />
+                <ScalarProperty Name="Seprator98" ColumnName="Seprator98" />
+                <ScalarProperty Name="ElmeasureSeprator" ColumnName="ElmeasureSeprator" />
+                <ScalarProperty Name="NeptuneSeprator" ColumnName="NeptuneSeprator" />
+                <ScalarProperty Name="LogixSeprator" ColumnName="LogixSeprator" />
+                <ScalarProperty Name="AurdinoSeprator" ColumnName="AurdinoSeprator" />
+                <ScalarProperty Name="PesDcuSeprator" ColumnName="PesDcuSeprator" />
+                <ScalarProperty Name="Disconnection91" ColumnName="Disconnection91" />
+                <ScalarProperty Name="Disconnection95" ColumnName="Disconnection95" />
+                <ScalarProperty Name="Disconnection100" ColumnName="Disconnection100" />
+                <ScalarProperty Name="Disconnection98" ColumnName="Disconnection98" />
+                <ScalarProperty Name="DisconnectionElmeasure" ColumnName="DisconnectionElmeasure" />
+                <ScalarProperty Name="DisconnectionNeptune" ColumnName="DisconnectionNeptune" />
+                <ScalarProperty Name="DisconnectionLogix" ColumnName="DisconnectionLogix" />
+                <ScalarProperty Name="DisconnectionAurdino" ColumnName="DisconnectionAurdino" />
+                <ScalarProperty Name="DisconnectionPesDcu" ColumnName="DisconnectionPesDcu" />
+                <ScalarProperty Name="MeterSock91" ColumnName="MeterSock91" />
+                <ScalarProperty Name="MeterSock95" ColumnName="MeterSock95" />
+                <ScalarProperty Name="MeterSock98" ColumnName="MeterSock98" />
+                <ScalarProperty Name="MeterSock100" ColumnName="MeterSock100" />
+                <ScalarProperty Name="SmsEngine" ColumnName="SmsEngine" />
+                <ScalarProperty Name="WaveSept" ColumnName="WaveSept" />
+                <ScalarProperty Name="WaveSept2" ColumnName="WaveSept2" />
+                <ScalarProperty Name="Dis_Wave" ColumnName="Dis_Wave" />
+                <ScalarProperty Name="HostName" ColumnName="HostName" />
+                <ScalarProperty Name="DomainName" ColumnName="DomainName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
